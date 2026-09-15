@@ -1,3 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: inherit;
+}
+
+/* =========================
+   Navigation
+   ========================= */
+
+header {
+    padding: 1.5rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > div {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+main > section:first-child {
+     min-height: 80vh;
+    padding: 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* =========================
+   Container
+   ========================= */
+
+.container {
+    width: min(100% - 4rem, 1200px);
+    margin-inline: auto;
+}
+
+/* =========================
+   Work
+   ========================= */
+
+#work {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+#work > h2 {
+    margin-bottom: 3rem;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.work-grid article {
+    padding: 2rem;
+    border: 1px solid #ddd;
+    min-height: 220px;
+    transition: transform 0.2s ease;
+
+}
+
+.work-grid article h3 {
+    margin-bottom: 1rem;
+}
+
+.work-grid article:hover {
+    transform: translateY(-5px);
 }
